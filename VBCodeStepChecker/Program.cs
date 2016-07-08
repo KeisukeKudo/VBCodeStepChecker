@@ -108,6 +108,10 @@ namespace VBCodeStepChecker {
                     //ステップ数設定
                     sheet.Cells[2, ColumnNumber.StepNumber].Value = stepNumber;
 
+                    //列幅自動調整
+                    sheet.Column(ColumnNumber.FileName).AutoFit();
+                    sheet.Column(ColumnNumber.StepNumber).AutoFit();
+
                     book.Save();
                 }
             });
@@ -150,6 +154,10 @@ namespace VBCodeStepChecker {
                         //ステップ数設定
                         sheet.Cells[f.RowNumber, ColumnNumber.StepNumber].Value = stepNumber;
                     }
+
+                    //列幅自動調整
+                    sheet.Column(ColumnNumber.FileName).AutoFit();
+                    sheet.Column(ColumnNumber.StepNumber).AutoFit();
 
                     book.Save();
                 }

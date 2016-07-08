@@ -9,6 +9,9 @@
 `result.xlsx` というファイル名でExcelファイルが出力されます｡  
 因みに､ディレクトリ検証の場合､ `foo.aspx.designer.vb` は対象外にしています｡(ステップ数取得する意味が無いので)  
 
-## 疑問
+## 使用ライブラリ
+[EPPlus](http://epplus.codeplex.com/ "EPPlus")
+
+### 疑問
 非同期処理とかこの書き方でいいのか  
 `while(true)` でループ回してるけどこれ正しいやり方なのか

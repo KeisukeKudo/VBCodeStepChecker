@@ -179,7 +179,7 @@ namespace VBCodeStepChecker {
         /// <param name="value"></param>
         /// <returns></returns>
         static bool IsCountTarget(string value) {
-            return (!Regex.IsMatch(value.Trim(), @"^[\s\'#]") && !String.IsNullOrWhiteSpace(value.Trim()));
+            return (!Regex.IsMatch(value.Trim(), @"^[\s\'#]") && !String.IsNullOrWhiteSpace(value));
         }
 
         /// <summary>

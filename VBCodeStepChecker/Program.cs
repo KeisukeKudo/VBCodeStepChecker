@@ -109,8 +109,7 @@ namespace VBCodeStepChecker {
                     sheet.Cells[2, ColumnNumber.StepNumber].Value = stepNumber;
 
                     //列幅自動調整
-                    sheet.Column(ColumnNumber.FileName).AutoFit();
-                    sheet.Column(ColumnNumber.StepNumber).AutoFit();
+                    ColumnsAutoFit(sheet);
 
                     book.Save();
                 }
@@ -156,8 +155,7 @@ namespace VBCodeStepChecker {
                     }
 
                     //列幅自動調整
-                    sheet.Column(ColumnNumber.FileName).AutoFit();
-                    sheet.Column(ColumnNumber.StepNumber).AutoFit();
+                    ColumnsAutoFit(sheet);
 
                     book.Save();
                 }
@@ -182,6 +180,15 @@ namespace VBCodeStepChecker {
         /// <returns></returns>
         static bool IsCountTarget(string value) {
             return (!Regex.IsMatch(value.Trim(), @"^[\s\'#]") && !String.IsNullOrWhiteSpace(value.Trim()));
+        }
+
+        /// <summary>
+        /// 列幅自動調整
+        /// </summary>
+        /// <param name="sheet"></param>
+        static void ColumnsAutoFit(ExcelWorksheet sheet) {
+            sheet.Column(ColumnNumber.FileName).AutoFit();
+            sheet.Column(ColumnNumber.StepNumber).AutoFit();
         }
         
         /// <summary>
